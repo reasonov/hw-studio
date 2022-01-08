@@ -1,0 +1,260 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.red {
+  color: #fe0000;
+}
+
+.container {
+  max-width: 1340px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  width: 100%;
+}
+
+.header__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 1370px;
+  width: 100%;
+  height: 60px;
+  padding: 50px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  font-family: "Century Gothic";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: none;
+  text-transform: lowercase;
+  color: #fe0000;
+}
+
+.burger__line {
+  display: block;
+  min-width: 34px;
+  height: 2px;
+  margin-bottom: 6px;
+  background-color: #a00000;
+}
+
+.burger__line--short {
+  min-width: 24px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.menu__border {
+  position: absolute;
+  bottom: -100vh;
+  right: 50px;
+
+  height: 2px;
+  width: calc(100% - 100px);
+
+  background-color: #a00000;
+}
+
+.borderAm-enter-active {
+  animation: .9s borderKeys linear;
+}
+
+.borderAm-leave-active {
+  animation: .9s borderKeys linear reverse;
+}
+
+@keyframes borderKeys {
+  0% {
+    bottom: 0px;
+    width: 1px;
+  }
+
+  50% {
+    bottom: 0px;
+    width: calc(100% - 100px);
+  }
+
+  100% {
+    bottom: -100vh;
+    width: calc(100% - 100px);
+  }
+}
+
+.secondary-page__logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+  font-family: "Trajan Pro 3";
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.secondary-page__logo--white {
+  color: #fff;
+}
+
+.secondary-page__logo--black {
+  color: #000;
+}
+
+.secondary-page__logo--red {
+  display: block;
+  color: #a00000;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #000;
+}
+
+.footer__wrapper {
+  max-width: 1100px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+.footer__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 430px;
+  margin-bottom: 50px;
+}
+
+.footer__line {
+  display: block;
+  width: 183px;
+  height: 1px;
+
+  background-color: #fff;
+}
+
+.footer__intro__text {
+  font-family: 'Engry';
+  font-size: 17px;
+  color: #fff;
+}
+
+.footer__caption {
+  font-family: "Trajan Pro 3";
+  font-size: 41px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+}
+
+.footer__item {
+  margin-bottom: 15px;
+
+  font-family: "Trajan Pro 3";
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer__request {
+  margin-left: 50px;
+  border-bottom: 1px solid #fe0000;
+
+  font-family: 'Engry';
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #fe0000;
+}
+
+.footer__address {
+  font-family: "Trajan Pro 3";
+  font-size: 25px;
+  color: #fff;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .footer__caption {
+    font-size: 35px;
+  }
+
+  .footer__item {
+    font-size: 21px;
+  }
+
+  .footer__request {
+    font-size: 35px;
+  }
+
+  .footer__address {
+    font-size: 21px;
+  }
+}
